@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Download</title>
+</head>
+<body>
+    <h1>Click to Download Image</h1>
+    <!-- Link to trigger the download -->
+    <a href="#" onclick="downloadImage()">Download Image</a>
+
+    <script>
+        function downloadImage() {
+            const imageUrl = "https://github.com/your-username/your-repository/raw/main/example-image.jpg";  // Replace with your image URL
+            const link = document.createElement('a');
+            link.href = imageUrl;
+            link.download = "downloaded-image.jpg";  // This will be the name of the downloaded image
+            document.body.appendChild(link);  // Append the link to the document
+            link.click();  // Trigger the click event to start the download
+            document.body.removeChild(link);  // Remove the link from the document
+        }
+    </script>
+</body>
+</html>
