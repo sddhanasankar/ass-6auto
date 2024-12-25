@@ -3,23 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image Download</title>
+    <title>File Download</title>
 </head>
 <body>
-    <h1>Click to Download Image</h1>
-    <!-- Link to trigger the download -->
-    <a href="#" onclick="downloadImage()">Download Image</a>
-
-    <script>
-        function downloadImage() {
-            const imageUrl = "https://https://github.com/sddhanasankar/ass-6auto/blob/main/chevrolet-corvette-5120x2880-17746.jpg";  // Replace with your image URL
-            const link = document.createElement('a');
-            link.href = imageUrl;
-            link.download = "downloaded-image.jpg";  // This will be the name of the downloaded image
-            document.body.appendChild(link);  // Append the link to the document
-            link.click();  // Trigger the click event to start the download
-            document.body.removeChild(link);  // Remove the link from the document
-        }
-    </script>
+    <h1>Click below to download the file:</h1>
+    <!-- Create a download link -->
+    <a href="https://github.com/username/repository-name/raw/main/yourfile.txt" download>
+        Download File
+    </a>
 </body>
 </html>
