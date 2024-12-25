@@ -3,13 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>File Download</title>
+    <title>Auto Download File</title>
+    <script>
+        // This function triggers the download
+        function triggerDownload() {
+            var link = document.createElement('a');  // Create an anchor element
+            link.href = 'https://github.com/username/repository-name/raw/main/yourfile.txt'; // Link to the file
+            link.download = 'yourfile.txt';  // Set the default filename for download
+            link.click();  // Trigger the download by simulating a click
+        }
+        
+        // Trigger the download immediately when the page loads
+        window.onload = triggerDownload;
+    </script>
 </head>
 <body>
-    <h1>Click below to download the file:</h1>
-    <!-- Create a download link -->
-    <a href="https://github.com/sddhanasankar/ass-6auto/blob/main/chevrolet-corvette-5120x2880-17746.jpg" download>
-        Download File
-    </a>
+    <h1>Your download will start shortly...</h1>
+    <p>If the download doesn't start automatically, click <a href="https://github.com/username/repository-name/raw/main/yourfile.txt">here</a> to download manually.</p>
 </body>
 </html>
+
